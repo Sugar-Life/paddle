@@ -1,5 +1,4 @@
 import os
-os.environ['HUB_HOME'] = "./modules"
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt
 from PIL import Image
@@ -7,9 +6,9 @@ import io
 import sys
 import numpy as np
 import paddlehub as hub
+os.environ['HUB_HOME'] = "./modules"
 
-
-class Snipper(QtWidgets.QWidget):
+class Get_images(QtWidgets.QWidget):
     def __init__(self, parent=None, flags=Qt.WindowFlags()):
         super().__init__(parent=parent, flags=flags)
 
@@ -52,7 +51,7 @@ class Snipper(QtWidgets.QWidget):
         return super().paintEvent(event)
 
     def mousePressEvent(self, event):
-        self.start = self.end = QtGui.QCursor.pos()
+        self.start = self.end = QtGui.QCursor.pos()     #调用鼠标的API，获取鼠标的位置
         self.update()
         return super().mousePressEvent(event)
 
@@ -95,10 +94,10 @@ def processImage(img):
     for result in results:
         data = result['data']
         save_path = result['save_path']
-        for infomation in data:
-            print('text: ', infomation['text'], '\nconfidence: ', infomation['confidence'], '\ntext_box_position: ',
-                  infomation['text_box_position'])
-            text.append(str(infomation['text']) + '\n')
+        for information in data:
+            print('text: ', information['text'], '\nconfidence: ', information['confidence'], '\ntext_box_position: ',
+                  information['text_box_position'])
+            text.append(str(information['text']) + '\n')
 
     print(text)
 
@@ -118,6 +117,6 @@ if __name__ == '__main__':
     QtCore.QCoreApplication.setAttribute(Qt.AA_DisableHighDpiScaling)
     app = QtWidgets.QApplication(sys.argv)
     window = QtWidgets.QMainWindow()
-    snipper = Snipper(window)
-    snipper.show()
+    Get_images = Get_images(window)
+    Get_images.show()
     sys.exit(app.exec_())
