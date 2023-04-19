@@ -14,7 +14,7 @@
 #     img = sct.grab(monitor=monitor)
 #     img = np.array(img)
 #     cv2.imshow(window_name,img)
-#     cv2.waitKey(1)
+#     cv2.waitKey(0)
 import numpy as np
 import cv2
 from PIL import ImageGrab
@@ -58,7 +58,7 @@ while True:
     cv2.setMouseCallback("Screen Capture", click_and_crop)
 
     # 按下q键退出循环
-    if cv2.waitKey(1) == ord("q"):
+    if cv2.waitKey(0) == ord("ESC"):
         break
 
     # 如果已经截屏，进行裁剪并显示

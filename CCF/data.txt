@@ -1,20 +1,9 @@
-命名项目的"命名空间包”的字符串列表。命名空间包是可以折分到多个项目中的包分布，例如
-Zope3的包是一个命名空间包，因为子包喜欢和可以单独分发。鸡蛋运行系统可以自动在运行时
-将这些子包合并到单个父包中，只要当您在包含命名空间包，并且只要命名空间包不包含除命名
-空间声明之外的任可代码，请参阅的有关详细信息，请参阅查找命名空间包部分
-zope interface zope.publisher
-zope
-init
-suite
-命名子类（或包或模块）的字符串包含其中的一个或多个，或此类子类的方法），或命名可以在
-没有参数的情况下调用并返回如果命名套件是模块，并且模块有一个函数，它被调用，结果是添
-加到要运行的测试中。如果命名套件是包，则任何子模块和子包以递归方式添加到整个测试套件
-中。unittest.TestCase unittest.TestSuite additional tests()
-指定此参数允许使用test命令来运行指定的测试套件，例如通过.有关更多详细信息，请参阅下面
-有关测试命令的部分。
-setup:py test
-警告
-自版本41.5.0起已车用：
-测试命令将在的未来版本中删除。
-以及任何测试配置参数。
-setuptools
+os.system(ridata.txt
+e0
+est03
+IUsers 24135V condalenvs\paddlelpython.exe D:lpython-make
+Apaddle)CCFITest03.py
+IUsers)24135V.condalenvs\paddle
+UserWarning
+warnings.warn("SetuptooLs
+acinq

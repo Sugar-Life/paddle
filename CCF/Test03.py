@@ -51,7 +51,7 @@ class Get_images(QtWidgets.QWidget):
         return super().paintEvent(event)
 
     def mousePressEvent(self, event):
-        self.start = self.end = QtGui.QCursor.pos()     #调用鼠标的API，获取鼠标的位置
+        self.start = self.end = QtGui.QCursor.pos()
         self.update()
         return super().mousePressEvent(event)
 
@@ -96,7 +96,7 @@ def processImage(img):
         save_path = result['save_path']
         for information in data:
             print('text: ', information['text'], '\nconfidence: ', information['confidence'], '\ntext_box_position: ',
-                  information['text_box_position'])
+                  information['text_box_position'],save_path)
             text.append(str(information['text']) + '\n')
 
     print(text)
@@ -111,7 +111,7 @@ def processImage(img):
 if __name__ == '__main__':
     # 加载移动端预训练模型
     # ocr = hub.Module(name="chinese_ocr_db_crnn_mobile")
-    # 服务端可以加载大模型，效果更好
+    # # 服务端可以加载大模型，效果更好
     ocr = hub.Module(name="chinese_ocr_db_crnn_server")
 
     QtCore.QCoreApplication.setAttribute(Qt.AA_DisableHighDpiScaling)
